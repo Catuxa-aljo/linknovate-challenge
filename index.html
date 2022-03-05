@@ -17,12 +17,16 @@
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Alert projects</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        
         <div class="offcanvas-body">
+            <div class="order">
+                Order by: date <i class="fa-solid fa-caret-up" role="button"></i><i class="fa-solid fa-caret-down" role="button"></i> alphabetical <i class="fa-solid fa-caret-up" role="button"></i><i class="fa-solid fa-caret-down" role="button"></i>
+            </div>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#myProjects" aria-expanded="false" aria-controls="collapseTwo">
-                      <i class="fa-solid fa-folder-open"></i> My Projects <span class="alert-numbers">6</span>
+                    <button id="folder" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#myProjects" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa-solid fa-folder" id="closed"></i><i class="fa-solid fa-folder-open invisible" id="open"></i> My Projects <span class="alert-numbers">6</span>
                     </button>
                   </h2>
                   <div id="myProjects" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -38,9 +42,9 @@
                                     </div>
                                 </div>
                             <ul>
-                                <li>Subject 2 <span class="alert-numbers">1</span></li>
-                                <li>Subject 3 <span class="alert-numbers">3</span></li>
-                                <li>Subject 4</li>
+                                <li><a href="">Subject 2 </a><span class="alert-numbers">1</span></li>
+                                <li><a href="">Subject 3 </a><span class="alert-numbers">3</span></li>
+                                <li><a href="">Subject 4</a></li>
                             </ul>
                         </li>
                      </ul>
@@ -93,7 +97,9 @@
               </div>
         </div>
         </div>
-        
+        <!-- SideNavBar Ending-->
+
+        <!-- main page contain-->
         <div class="template"> 
             <button class="btn btn-primary alert" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Your alerts <span class="alert-numbers">6</span></button>
             <div class="container">
@@ -119,5 +125,6 @@
     </div>
     <script src="https://kit.fontawesome.com/64538bae03.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

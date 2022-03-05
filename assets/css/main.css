@@ -3,6 +3,7 @@
     --blue-color: #283246;
     --gradient: linear-gradient(180deg, rgba(60,210,175,1) 0%, rgba(250,250,250,1) 100%);
     --medium-size-text: 1rem;
+    --transitions-duration:  0.4s
 }
 
 body {
@@ -13,6 +14,10 @@ body {
 i {
     padding: 5px;
     color: var(--blue-color)
+}
+
+h4 {
+    font-size: 1rem;
 }
 
 .template {
@@ -35,11 +40,15 @@ i {
 }
 .accordion-body i {
     color: var(--blue-color);
-    transition-duration: 0.4s;
+    transition-duration: var(--transitions-duration);
    
 }
 .accordion-body i:hover{
     color: var(--prime-color);
+}
+
+.accordion-header button{
+    text-transform: uppercase;
 }
 
 .alert-numbers {
@@ -80,7 +89,41 @@ i {
     font-size: 2rem;
 }
 
+.invisible {
+    display: none;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    
+}
 
+.accordion-button:not(.collapsed) {
+    color: var(--prime-color);
+    background-color: ghostwhite;
+}
+
+.accordion-button:focus { 
+    border-color: var(--prime-color);
+    box-shadow: 0 0 0 0.25rem rgb(60 210 175 / 25%);
+    color: rgb(60, 210, 175);
+}
+
+.accordion-body a{
+    text-decoration: none;
+    color: var(--blue-color);
+    transition-duration: var(--transitions-duration);
+    border-bottom: #283246 dotted solid thin;
+}
+
+.accordion-body a:hover, .order {
+    color: var(--prime-color);
+}
+
+.accordion-button:not(.collapsed)::after  {
+
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233cd2af'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")
+ 
+}
 
 
 
