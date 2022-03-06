@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   //open and close folder icon toggle
 	
-  document.getElementById('folder').addEventListener('click', () => {     
-	  openFolder()
-    });
+  document.querySelectorAll('.folders').forEach(folder => {
+    folder.addEventListener('click', () => {     
+	  folder.querySelectorAll('.folder').forEach(fold => {
+      fold.classList.toggle('invisible')
+    })
+    })
+   });
 	
 const openFolder = () => {
 	  document.getElementById('open').classList.toggle('invisible');
